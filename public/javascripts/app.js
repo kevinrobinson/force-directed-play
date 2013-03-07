@@ -180,7 +180,7 @@ window.require.register("force_graph", function(exports, require, module) {
 window.require.register("initialize", function(exports, require, module) {
   var ForceGraph, miserablesData;
 
-  ForceGraph = require('mod_graph');
+  ForceGraph = require('force_graph');
 
   miserablesData = require('miserables');
 
@@ -190,9 +190,14 @@ window.require.register("initialize", function(exports, require, module) {
       links: [],
       nodes: []
     };
-    window.forceGraph = forceGraph = new ForceGraph({
-      selector: 'body'
-    }).render().updateData(graphData);
+    forceGraph = new ForceGraph({
+      selector: 'body',
+      gravity: 0,
+      alpha: 0,
+      friction: 1
+    });
+    forceGraph.render().updateData(graphData);
+    window.forceGraph = forceGraph;
     return $('BUTTON.load').on('click', function() {
       return forceGraph.updateData({
         nodes: miserablesData.nodes.slice(0, 70),

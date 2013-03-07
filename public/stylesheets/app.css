@@ -389,35 +389,6 @@ svg {
   stroke: #999;
   stroke-opacity: 0.6;
 }
-.header {
-  width: 476px;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #4276b6;
-}
-.header-link {
-  margin-right: 32px;
-  text-decoration: none;
-  color: #eee;
-}
-.header-link:visited {
-  color: #eee;
-}
-.header-link:hover {
-  text-decoration: underline;
-}
-.header-link:last-child {
-  margin-right: 0;
-}
-.home-page {
-  width: 476px;
-  height: 130px;
-  margin: 5px auto;
-  padding: 5px;
-  margin-bottom: 0.5em;
-  color: #fff;
-  background-color: #4276b6;
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
